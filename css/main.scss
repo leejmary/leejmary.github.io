@@ -1,0 +1,167 @@
+//TYPE
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+//MODULES
+$varela: 'Varela Round', sans-serif;
+$pink: rgba(255,164,160,0.85);
+$gray: rgba(255,255,255,0.75); 
+
+//DOM ELEMENTS
+* {
+	box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	font: {
+		family: $varela;
+		size: 16px;
+	}
+	letter-spacing: 1px;
+	color: #fff;
+}
+
+body {
+	margin: 0 0 80px;
+	background: {
+		image: url('../img/background.jpg');
+		position: center center;
+		repeat: no-repeat;
+		attachment: fixed;
+		-webkit-size: cover;
+		-moz-size: cover;
+		-o-size: cover;
+		size: cover;
+	}
+}
+
+a {
+	color: #fff;
+	font-size: 0.9em;
+	text: {
+		decoration: none;
+		transform: uppercase;
+	}
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	&:hover {
+		color: rgba(255,164,160,0.85);
+	}
+}
+
+header {
+	border-bottom: 1px solid $gray;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+footer {
+	height: 80px;
+	z-index: 5;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	p {
+		font-size: 0.75em;
+	}
+	i {
+		color: $pink;
+	}
+}
+
+
+//STYLESHEET
+
+.container {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+ul {
+	float: right;
+	&.index {
+		float: left;
+	}
+}
+
+ul li {
+	display: inline-block;
+	margin-right: 50px;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.content-area {
+	margin-top: 8%;
+	max-width: 55%;
+	p {
+		line-height: 2.5em;
+		text-align: center;
+		letter-spacing: 1px;
+		font-size: 1em;
+	}
+	a {
+		font-size: 1em;
+		color: $gray;
+		text-transform: none;
+		border-bottom: 1px solid $gray;
+		&:hover {
+			color: $pink;
+		}
+	}
+}
+
+//MEDIA
+@media screen and (max-width: 1200px){
+	.content-area {
+		max-width: 75%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		padding-top: 20px;
+		padding-bottom: 30px;
+	}
+
+	.container {
+		text-align: center;
+	}
+
+	ul {
+		float: none;
+		&.index {
+			float: none;
+		}
+	}
+
+	ul li {
+		display: block;
+		margin-right: 0;
+		padding-top: 15px;
+	}
+
+	.content-area {
+		max-width: 90%;
+		p {
+			font-size: 0.9em;
+			line-height: 2.2em;
+		}
+	}
+}
