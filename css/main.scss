@@ -53,7 +53,7 @@ a {
 }
 
 header {
-	border-bottom: 1px solid $gray;
+	border-bottom: 1px solid rgba(255,255,255,0.25); 
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
@@ -73,9 +73,21 @@ footer {
 	}
 	i {
 		color: $pink;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		&:hover {
+			text-shadow: 0px 5px 3px rgba(0,0,0,0.5);
+			transform: translateY(-3px);
+		}
 	}
 }
 
+.fa {
+	font-size: 1.25em;
+	transform: translateY(1px);
+}
 
 //STYLESHEET
 
@@ -123,6 +135,19 @@ ul li {
 		border-bottom: 1px solid $gray;
 		&:hover {
 			color: $pink;
+		}
+	}
+}
+
+.content-area-two {
+	p {
+		line-height: 3em;
+	}
+	a {
+		border-bottom: 0;
+		margin-right: 25px;
+		&:last-child {
+			margin-right: 0;
 		}
 	}
 }

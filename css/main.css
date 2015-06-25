@@ -34,7 +34,7 @@ a {
     color: rgba(255, 164, 160, 0.85); }
 
 header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   padding-top: 40px;
   padding-bottom: 40px; }
 
@@ -51,7 +51,18 @@ footer {
   footer p {
     font-size: 0.75em; }
   footer i {
-    color: rgba(255, 164, 160, 0.85); }
+    color: rgba(255, 164, 160, 0.85);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    footer i:hover {
+      text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
+      transform: translateY(-3px); }
+
+.fa {
+  font-size: 1.25em;
+  transform: translateY(1px); }
 
 .container {
   padding-left: 2rem;
@@ -90,6 +101,14 @@ ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.75); }
     .content-area a:hover {
       color: rgba(255, 164, 160, 0.85); }
+
+.content-area-two p {
+  line-height: 3em; }
+.content-area-two a {
+  border-bottom: 0;
+  margin-right: 25px; }
+  .content-area-two a:last-child {
+    margin-right: 0; }
 
 @media screen and (max-width: 1200px) {
   .content-area {
