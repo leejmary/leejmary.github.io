@@ -9,16 +9,4 @@ $(function(){
 		});
 
 	});
-
-  	function testAnim(x) {
-    $('.fa-heart').removeClass(x + " animated").addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-    $(this).removeClass(x);
-    	});
-  	}
-
-	$(".fa-heart").on("mouseenter", function(e){
-		e.preventDefault();
-		testAnim("wobble");
-	});
-
 });

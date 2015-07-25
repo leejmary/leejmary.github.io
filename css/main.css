@@ -12,26 +12,16 @@ html {
 
 body {
   margin: 0 0 100px;
-  background-image: url("../img/background.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background--webkit-size: cover;
-  background--moz-size: cover;
-  background--o-size: cover;
-  background-size: cover; }
+  background-color: #00acc1; }
 
 a {
   color: #fff;
   font-size: 0.9em;
   text-decoration: none;
-  text-transform: uppercase;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out; }
-  a:hover {
-    color: rgba(255, 164, 160, 0.85); }
 
 header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.25);
@@ -51,17 +41,18 @@ footer {
   footer p {
     font-size: 0.75em; }
   footer i {
-    color: rgba(255, 164, 160, 0.85);
+    color: #ffcc80;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
+    transition: all 0.2s ease-in-out; }
     footer i:hover {
-      text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5); }
+      color: #ffcdd2;
+      text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
+      transform: translateY(-5px); }
 
 .container {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  width: 80%;
   max-width: 1200px;
   margin: 0 auto; }
 
@@ -72,17 +63,19 @@ footer {
 
 ul {
   float: right; }
+  ul a {
+    color: rgba(255, 255, 255, 0.75); }
   ul.index {
     float: left; }
     ul.index a {
-      color: rgba(255, 164, 160, 0.85); }
+      font-size: 1.15em; }
 
 ul li {
   display: inline-block; }
 
 .content-area {
   margin-top: 8%;
-  max-width: 55%; }
+  max-width: 48%; }
   .content-area p {
     line-height: 2.2em;
     text-align: center;
@@ -94,7 +87,7 @@ ul li {
     text-transform: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.75); }
     .content-area a:hover {
-      color: rgba(255, 164, 160, 0.85); }
+      color: #ffcc80; }
 
 .content-area-two p {
   line-height: 3em; }
@@ -106,60 +99,6 @@ ul li {
 
 .fa {
   font-size: 1.25em; }
-
-.animated {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-@-webkit-keyframes wobble {
-  0% {
-    -webkit-transform: none;
-    transform: none; }
-  15% {
-    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); }
-  30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); }
-  45% {
-    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); }
-  60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); }
-  75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); }
-  100% {
-    -webkit-transform: none;
-    transform: none; } }
-@keyframes wobble {
-  0% {
-    -webkit-transform: none;
-    transform: none; }
-  15% {
-    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
-    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); }
-  30% {
-    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
-    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); }
-  45% {
-    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
-    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); }
-  60% {
-    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
-    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); }
-  75% {
-    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
-    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); }
-  100% {
-    -webkit-transform: none;
-    transform: none; } }
-.wobble {
-  -webkit-animation-name: wobble;
-  animation-name: wobble; }
 
 @media screen and (max-width: 1200px) {
   .content-area {
@@ -176,16 +115,17 @@ ul li {
     float: none; }
     ul.index {
       float: none; }
-
-  ul li {
-    display: block;
-    margin-right: 0;
-    padding-top: 15px; }
+    ul li {
+      display: block;
+      margin-right: 0;
+      padding-top: 15px; }
 
   .content-area {
-    max-width: 90%; }
+    max-width: 95%; }
     .content-area p {
       font-size: 0.9em;
-      line-height: 2.2em; } }
+      line-height: 2.2em; }
+    .content-area.content-area-two p {
+      line-height: 3.5em; } }
 
 /*# sourceMappingURL=main.css.map */
