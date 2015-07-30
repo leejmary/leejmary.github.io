@@ -3,14 +3,23 @@
 <svg version="1.1" id="InteractiveSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 586.4 761" style="enable-background:new 0 0 586.4 761;" xml:space="preserve">
 <style type="text/css">
+
+@font-face {
+ font-family: 'Montserrat';
+ font-style: normal;
+ font-weight: 700;
+ src: local('Montserrat-Bold'), url(http://fonts.gstatic.com/s/montserrat/v6/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2');
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
 	.st0{fill:#335B7D;}
 	.st1{fill:none;stroke:#F04861;stroke-width:3;stroke-miterlimit:10;}
 	.st2{fill:#F04861;}
 	.st3{fill:#FFFFFF;}
-	.st4{font-family:'Montserrat-Bold';}
+	.st4{font-family:'Montserrat'; font-weight:700;}
 	.st5{font-size:16px;}
 	.st6{fill:none;}
-	.st7{font-family:'Hind-Regular';}
+	.st7{font-family:'Hind';}
 	.st8{font-size:13.5px;}
 	.st9{fill:none;stroke:#0EBECC;stroke-width:3;stroke-miterlimit:10;}
 	.st10{fill:#0EBECC;}
@@ -30,7 +39,7 @@
 		<g id="morning-badge">
 			<rect id="morning-square" x="0.4" class="st2" width="227.5" height="144"/>
 			<g id="morning-title">
-				<text id="XMLID_73_" transform="matrix(1 0 0 1 72.3731 32.1125)" class="st3 st4 st5">MORNING</text>
+				<text id="XMLID_73_" transform="matrix(1 0 0 1 72.3731 32.1125)" class="st3 st4 st5" font-family="Montserrat">MORNING</text>
 			</g>
 			<g id="morning-details">
 				<path id="morning-icon" class="st3" d="M134.6,73.3l-7.2,2.4v7.5c0,0.2-0.1,0.5-0.3,0.6c-0.2,0.1-0.5,0.2-0.7,0.1l-7.2-2.3

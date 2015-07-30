@@ -46,16 +46,6 @@ p {
 	line-height: 1.3rem;
 }
 
-button {
-	text-decoration: none;
-	padding: 0.6rem 2rem .5rem;
-	background-color: transparent;
-	font: {
-		size: 1rem;
-		family: $hind;
-		}
-}
-
 footer {
 	background-color: $darkblue;
 	color: #fff;
@@ -102,9 +92,9 @@ footer {
 			color: $gray;
 		}
 		a {
-			color: $purple;
 			text-decoration: none;
 			padding: 0.6rem 2rem .5rem;
+			color: $purple;
 			&.selected {
 				background-color: $purple;
 				color: #fff;
@@ -152,8 +142,10 @@ footer {
 			font-size: 1.2rem;
   			line-height: 1.5rem;
 		}
-		button {
+		a {
 			position: absolute;
+			text-decoration: none;
+			padding: 0.6rem 2rem .5rem;
 			top: 290px;
 			right: 0;
 			color: $purple;
@@ -209,6 +201,13 @@ footer {
 		right: 0;
 		img {
 			width: 100%;
+			opacity: 0;
+			transform: translateX(50px);
+			transition: all 0.5s ease-in-out;
+			&.is-showing {
+				opacity: 1;
+				transform: translateX(0px);
+			}
 		}
 	}
 	.grid-container {
@@ -235,6 +234,15 @@ footer {
 				margin-bottom: 10px;
 			}
 		}
+		.grid-33 {
+			opacity: 0;
+			transform: translateY(30px);
+			transition: all 0.5s ease-in-out;
+			&.is-showing {
+				opacity: 1;
+				transform: translateY(0px);
+			}
+		}
 	}
 }
 
@@ -256,15 +264,24 @@ footer {
 	background-color: $gray;
 	.container {
 		position: relative;
-		.phone-and-band img {
-			position: absolute;
-			left: 50%;
-			-webkit-transform: translateX(-35%);
-			-moz-transform: translateX(-35%);
-			-ms-transform: translateX(-35%);
-			-o-transform: translateX(-35%);
-			transform: translateX(-35%);
-			max-width: 475px
+		.phone-and-band {
+			opacity: 0;
+			transform: translateY(50px);
+			transition: all 0.5s ease-in-out;
+			img {
+				position: absolute;
+				left: 50%;
+				-webkit-transform: translateX(-35%);
+				-moz-transform: translateX(-35%);
+				-ms-transform: translateX(-35%);
+				-o-transform: translateX(-35%);
+				transform: translateX(-35%);
+				max-width: 475px
+			}
+			&.is-showing {
+				opacity: 1;
+				transform: translateX(0px);
+			}
 		}
 		ul {
 			list-style-type: none;
@@ -357,13 +374,17 @@ footer {
 				display: block;
 				margin: 5px auto 20px;
 			}
-			span {
+			b {
 				font-family: $montserrat;
+				font-weight: 700;
 				line-height: 2.5rem;
 			}
 		}
 	}
-	button {
+	a {
+		text-decoration: none;
+		padding: 0.6rem 2rem .5rem;
+		font-weight: 300;
 		width: 230px;
 		display: block;
 		color: #fff;
@@ -376,6 +397,8 @@ footer {
 		}
 		&.other-user-stories {
 			display: none;
+			text-decoration: none;
+			padding: 0.6rem 2rem .5rem;
 			background-color: $pink;
 			border: 1px solid $pink;
 			&:hover {
@@ -449,7 +472,11 @@ footer {
 #buy {
 	text-align: center;
 	background-color: $gray;
-	button {
+	a {
+		text-decoration: none;
+		padding: 0.6rem 2rem .5rem;
+		font-weight: 300;
+		display: inline-block;
 		border: 1px solid $pink;
 		background-color: $pink;
 		color: #fff;
@@ -467,7 +494,7 @@ footer {
 	#home {
 		background-position: 70% 0;
 		.text {
-			button {
+			a {
 				top: 230px;
 			}
 		}
@@ -642,7 +669,7 @@ footer {
 	}
 
 	#community {
-		button {
+		a {
 			&.other-user-stories {
 				display: block;
 			}
@@ -694,7 +721,7 @@ footer {
 				margin: 0 auto;
 				width: 85%;
 			}
-			button {
+			a {
 				position: relative;
 				top: 40px;
 			}
