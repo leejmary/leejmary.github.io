@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Mary Lee - Spotify Artist Exploration Website</title>
+		<link rel="stylesheet" href="css/reset.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/secondary.css">
+	</head>
+	<body>
+		<header class="spotify">
+			<div class="overlay">
+			<a href="index.html">leemaryjane.com</a>
+				<div class="title">
+					<h1 class="animated fadeInUp">Spotify</h1>
+					<h2 class="animated delay fadeInUp">Case Study</h2>
+				</div>
+			<div>
+		</header>
+		<nav class="initial-position">
+			<ul class="container">
+				<li><a href="spotify.html" class="selected">Spotify</a></li>
+				<li><a href="vicolo.html">Vicolo Tours</a></li>
+				<li><a href="greatlakes.html">Great Lakes Brewing Co.</a></li>
+				<li><a href="pulseband.html">Pulseband</a></li>
+			</ul>
+		</nav>
+
+		<section class="project container clearfix">
+			<div class="overview">
+				<h3>Overview</h3>
+				<p>Spotify is a commercial music streaming, podcast and video service that provides millions of digital rights management-restricted media to users worldwide. In a two-week allotted time window, I created a basic web-based artist discovery application leveraging Spotify's API and Materialize CSS, a CSS framework based on Google's Material design.</p>
+			</div>
+			<div class="role">
+				<h3>Role</h3>
+				<p>Designer, Front-End Developer</p>
+				<ul>
+					<li>HTML</li>
+					<li>SCSS</li>
+					<li>JavaScript</li>
+					<li>JQuery</li>
+					<li>AJAX</li>
+					<li>Materialize CSS</li>
+					<li>RWD</li>
+				</ul>
+			</div>
+			<div class="process clearfix">
+				<h3>Process</h3>
+				<img src="img/spotify-1.jpg" />
+				<p>
+					Before diving into the development of this assignment, I had to not only envision what the interface would look like on both desktop and mobile devices utilizing Materialize CSS, but also determine what components of the Spotify catalog, or API endpoints, would be relevant for the purposes of artist discovery.
+				</p>
+				<p>
+					Once a general layout had been determined for both desktop and mobile devices (<span>Image 1.</span> Initial sketches shown right/above.), I explored the various API endpoints made available through Spotify and decided to include the following: (1) the originally searched artist's most popular track; (2) the ability to follow the originally searched artist; (3) the originally searched artist's top four related artists and (4) their respective most popular tracks; and (5) the ability to play each of these tracks directly from the website application (provided the user is logged into his/her own Spotify account).
+				</p>
+			</div>
+			<div class="additional-images">
+				<div class="photo-1">
+					<img src="img/spotify-2.jpg" />
+				</div>
+				<div class="photo-2">
+					<img src="img/spotify-3.jpg" />
+				</div>
+				<p><span>Image 2.</span> Pre-expanded primary artist card. Tablet view.</p>
+				<p><span>Image 3.</span> Pre-expanded and expanded secondary artists cards. Tablet view.</p>
+			</div>
+			<div class="view-site">
+				<h3>Development</h3>
+				<p>
+					The final piece is a completely responsive web application that includes all aforementioned features built on the Materialize CSS framework.
+				</p>
+				<a href="Spotify/index.html" target="_blank">View Site&nbsp;&nbsp;<i class="fa fa-file-o"></i></a>
+				<a href="#">View on GitHub&nbsp;&nbsp;<i class="fa fa-github-alt"></i></a>
+			</div>
+		</section>
+		<section class="navigation container">
+			<ul>
+				<li><a href="pulseband.html"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Pulseband</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="vicolo.html">Vicolo Tours&nbsp;&nbsp;<i class="fa fa-chevron-right"></i></a></li>
+			</ul>
+		</section>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/secondary.js"></script>
+	</body>
+</html>
