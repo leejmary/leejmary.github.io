@@ -1,0 +1,468 @@
+//------------------------MODULES
+$varela: 'Varela Round', sans-serif;
+$black: #212121;
+$blue: #00bcd4;
+$indigo: #3f51b5;
+
+
+//------------------------GLOBAL ELEMENTS
+* {box-sizing: border-box;}
+
+html {
+	font: {
+		family: $varela;
+		size: 16px;
+	}
+}
+
+h1, h2 {
+	color: #fff;
+}
+
+h1, h3, p {
+	margin-bottom: 0.7rem;
+}
+
+h1 {
+	font-size: 4.2rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+section {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+
+p {
+	line-height: 1.6rem;
+}
+
+a {
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+img {
+	margin: 0 5px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2),
+				0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+span {
+	color: $blue;
+}
+
+//------------------------STYLESHEET
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+	text-align: center;
+	height: 85vh;
+	position: relative;
+	&.spotify {
+		background: url('../img/spotify-hero.jpg') center center no-repeat fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	&.vicolo {
+		background: url('../img/vicolo-hero.jpg') center center no-repeat fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	&.greatlakes {
+		background: url('../img/greatlakes-hero.jpg') center center no-repeat fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	&.pulseband {
+		background: url('../img/pulseband-hero.jpg') center center no-repeat fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	.overlay {
+		width: 100%;
+		height: 85vh;
+		background-color: rgba(25, 57, 153, 0.7);
+		a {
+			color: #fff;
+			position: relative;
+			top: 30px;
+			&:hover, &.selected {
+				color: rgba(255,255,255,0.5);
+			}
+		}
+	}
+	.title {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+	}
+}
+
+nav {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	text-align: center;
+	ul {
+		li {
+			display: inline-block;
+			a {
+				color: #fff;
+				padding: 1rem 2rem;
+				&:hover, &.selected {
+					color: rgba(255,255,255,0.5);
+				}
+			}
+		}
+	}
+	&.initial-position {
+		background-color: transparent;
+		position: relative;
+		bottom: 80px;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+		-o-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+	}
+	&.sticky {
+		height: 80px;
+		background-color: $indigo;
+		position: fixed;
+	    top: 0;
+	    width:100%;
+	    z-index:100;
+	}
+}
+
+.container {
+	width: 65%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.project {
+	margin-top: -80px;
+	a {
+		color: $indigo;
+		padding: 9px 12px 7px;
+		margin-right: 10px;
+		border-radius: 25px;
+		border: 2px solid $indigo;
+		&:hover {
+			color: #fff;
+			background-color: $indigo;
+		}
+	}
+	div {
+		margin-bottom: 25px;
+	}
+	img {
+		overflow: initial;
+		opacity: 0;
+		-webkit-transition: all 0.5s ease-in-out;
+		-moz-transition: all 0.5s ease-in-out;
+		-o-transition: all 0.5s ease-in-out;
+		transition: all 0.5s ease-in-out;
+		transform: translateY(200px);
+		&.is-showing {
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+	& .role {
+		ul {
+			li {
+				font-size: 0.9rem;
+				color: #fff;
+				display: inline-block;
+				background-color: $blue;
+				padding: 9px 12px 7px;
+				margin-right: 5px;
+				margin-bottom: 7px;
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	& .process {
+		img {
+			float: right;
+			width: 48%;
+			margin-left: 20px;
+			margin-bottom: 20px;
+			transform: translateX(200px);
+			&.is-showing {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+	}
+	& .additional-images {
+		width: 100%;
+		img {
+			width: 48%;
+			margin-bottom: 30px;
+		}
+		ul {
+			li {
+				width: 48%;
+				display: inline;
+			}
+		}
+		& .photo-1 {
+			img {
+				float: left;
+			}
+		}
+		& .photo-2 {
+			img {
+				float: right;
+			}
+		}
+		p {
+			text-align: center;
+		}
+	}
+	& .view-site {
+		p {
+			margin-bottom: 30px;
+		}
+		ul {
+			margin-bottom: -35px;
+			li {
+				display: inline-block;
+				padding-bottom: 15px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.navigation {
+	padding-top: 0rem;
+	padding-bottom: 4rem;
+	text-align: center;
+	ul {
+		clear: both;
+		li {
+			display: inline-block;
+			&:first-child {
+				float: left;
+			}
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+	a {
+		color: $blue;
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+
+
+//------------------------ANIMATIONS
+
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2015 Daniel Eden
+*/
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.delay {
+	-webkit-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+.animated.infinite {
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+//------------------------MEDIA QUERIES
+
+@media screen and (max-width: 1060px) {
+
+	.project {
+		img {
+			transform: translateX(0);
+		}
+		& .process {
+			img {
+				float: none;
+				display: block;
+				width: 95%;
+				margin: 20px auto 30px;
+			}
+		}
+		& .additional-images {
+			text-align: center;
+			img {
+				width: 95%;
+				margin-bottom: 0;
+			}
+			& .photo-1 {
+				img {
+					float: none;
+				}
+			}
+			& .photo-2 {
+				img {
+					float: none;
+				}
+			}
+		}
+	}
+
+	nav {
+	ul {
+		li {
+			a {
+				padding: 1rem 1rem;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 860px) {
+	html {
+		font-size: 15px;
+	}
+
+	.container {
+		width: 80%;
+	}
+
+	nav {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	html {
+		font-size: 14px;
+	}
+
+	header {
+		background-attachment: initial;
+	}
+
+	section {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+
+	.container {
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.project {
+		a {
+			width: 85%;
+			display: block;
+			margin: 0 auto 10px;
+			text-align: center;
+		}
+		.view-site {
+			ul {
+				margin: 0 auto;
+				text-align: center;
+				li {
+					display: block;
+					margin-bottom: 15px;
+					padding-bottom: 0;
+					a {
+						width: 85%;
+						display: block;
+						margin: 0 auto;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+
+	.navigation {
+		font-size: 12px;
+	}
+}
